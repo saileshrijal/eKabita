@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace eKabita.Models
+{
+    public class Poem
+    {
+        public Guid Id { get; set; }
+        public Like? PoemId { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public string? Remarks { get; set; }
+        public string? ApplicationUserId { get; set; }   
+        public ApplicationUser? ApplicationUser { get; set; }
+    }
+}
