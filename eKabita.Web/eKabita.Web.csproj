@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\eKabita.Data\eKabita.Data.csproj" />
+    <ProjectReference Include="..\eKabita.Repsitories\eKabita.Repsitories.csproj" />
   </ItemGroup>
 
 </Project>

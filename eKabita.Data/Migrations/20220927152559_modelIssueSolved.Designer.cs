@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eKabita.Data;
 
@@ -11,9 +12,10 @@ using eKabita.Data;
 namespace eKabita.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class EKabitaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220927152559_modelIssueSolved")]
+    partial class modelIssueSolved
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

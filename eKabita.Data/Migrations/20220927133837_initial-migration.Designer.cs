@@ -11,7 +11,7 @@ using eKabita.Data;
 
 namespace eKabita.Data.Migrations
 {
-    [DbContext(typeof(EKabitaDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220927133837_initial-migration")]
     partial class initialmigration
     {
