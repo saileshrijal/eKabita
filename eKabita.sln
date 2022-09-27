@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Web", "eKabita.Web\eKabita.Web.csproj", "{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Models", "eKabita.Models\eKabita.Models.csproj", "{2CFB1693-74D3-4459-93A7-211EEB1D7606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Data", "eKabita.Data\eKabita.Data.csproj", "{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Services", "eKabita.Services\eKabita.Services.csproj", "{EB1C63A5-3263-4461-BD3D-299B056451DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Utilites", "eKabita.Utilites\eKabita.Utilites.csproj", "{C0BB4506-898D-47BF-AD05-8470FD945C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Repsitories", "eKabita.Repsitories\eKabita.Repsitories.csproj", "{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFB1693-74D3-4459-93A7-211EEB1D7606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFB1693-74D3-4459-93A7-211EEB1D7606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFB1693-74D3-4459-93A7-211EEB1D7606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFB1693-74D3-4459-93A7-211EEB1D7606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1C63A5-3263-4461-BD3D-299B056451DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1C63A5-3263-4461-BD3D-299B056451DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1C63A5-3263-4461-BD3D-299B056451DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1C63A5-3263-4461-BD3D-299B056451DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BB4506-898D-47BF-AD05-8470FD945C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BB4506-898D-47BF-AD05-8470FD945C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BB4506-898D-47BF-AD05-8470FD945C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BB4506-898D-47BF-AD05-8470FD945C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFA818AD-B72B-4B9D-8435-4DA55DB9D24B}
+	EndGlobalSection
+EndGlobal
