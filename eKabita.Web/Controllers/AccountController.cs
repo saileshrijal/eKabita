@@ -1,26 +1,22 @@
-﻿using eKabita.Models;
-using eKabita.Web.Models.LoginViewModel;
-using eKabita.Web.Models.RegisterViewModel;
-using Microsoft.AspNetCore.Identity;
+﻿using eKabita.Services.Interface;
+using eKabita.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eKabita.Web.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly IUserService _userService;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(IUserService userService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
+            _userService = userService;
         }
 
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
-            await signInManager.SignOutAsync();
+            await _userService.Logout();
             return RedirectToAction("Index", "Home");
         }
 
@@ -31,23 +27,10 @@ namespace eKabita.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterVIewModel regViewModel) {
-            if (ModelState.IsValid) { 
-                var user = new ApplicationUser() {
-                  FirstName = regViewModel.FirstName,
-                  LastName = regViewModel.LastName,
-                  UserName = regViewModel.UserName,
-                  Email = regViewModel.Email
-                };
-                var result = await userManager.CreateAsync(user,regViewModel.Password);
-                if (result.Succeeded) {
-                    await signInManager.SignInAsync(user, false);
-                    return RedirectToAction("Index", "Home");
-                }
-
-                foreach (var error in result.Errors) { 
-                    ModelState.AddModelError(string.Empty,error.Description);
-                }
+        public async Task<IActionResult> Register(RegisterViewModel regViewModel) {
+            if (ModelState.IsValid) {
+                await _userService.Register(regViewModel);
+                return RedirectToAction("Index", "Home");
             }
             return View(regViewModel);
         }
@@ -63,15 +46,8 @@ namespace eKabita.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await signInManager.PasswordSignInAsync(loginViewModel.UserName, 
-                    loginViewModel.Password, loginViewModel.RememberMe, false);
-
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-               
-                ModelState.AddModelError(string.Empty, "Invalid Username or Password");  
+                await _userService.Login(loginViewModel);
+                return RedirectToAction("Index", "Home");
             }
             return View(loginViewModel);
         }

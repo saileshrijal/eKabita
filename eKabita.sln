@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Web", "eKabita.Web\eKabita.Web.csproj", "{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Web", "eKabita.Web\eKabita.Web.csproj", "{91BCE721-B6E8-4DD6-8DC9-9DB61F189E3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Models", "eKabita.Models\eKabita.Models.csproj", "{2CFB1693-74D3-4459-93A7-211EEB1D7606}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Models", "eKabita.Models\eKabita.Models.csproj", "{2CFB1693-74D3-4459-93A7-211EEB1D7606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Data", "eKabita.Data\eKabita.Data.csproj", "{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Data", "eKabita.Data\eKabita.Data.csproj", "{B6A0BBA4-53E2-4369-8AD7-FB50A37F565D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Services", "eKabita.Services\eKabita.Services.csproj", "{EB1C63A5-3263-4461-BD3D-299B056451DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Services", "eKabita.Services\eKabita.Services.csproj", "{EB1C63A5-3263-4461-BD3D-299B056451DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Utilites", "eKabita.Utilites\eKabita.Utilites.csproj", "{C0BB4506-898D-47BF-AD05-8470FD945C7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Utilites", "eKabita.Utilites\eKabita.Utilites.csproj", "{C0BB4506-898D-47BF-AD05-8470FD945C7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eKabita.Repsitories", "eKabita.Repsitories\eKabita.Repsitories.csproj", "{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Repsitories", "eKabita.Repsitories\eKabita.Repsitories.csproj", "{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSchool.ViewModels", "eSchool.ViewModels\eSchool.ViewModels.csproj", "{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

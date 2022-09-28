@@ -16,6 +16,12 @@
   <ItemGroup>
     <ProjectReference Include="..\eKabita.Data\eKabita.Data.csproj" />
     <ProjectReference Include="..\eKabita.Repsitories\eKabita.Repsitories.csproj" />
+    <ProjectReference Include="..\eKabita.Services\eKabita.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\LoginViewModel\" />
+    <Folder Include="Models\RegisterViewModel\" />
   </ItemGroup>
 
 </Project>
