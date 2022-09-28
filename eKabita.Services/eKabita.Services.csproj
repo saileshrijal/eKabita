@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eSchool.ViewModels\eSchool.ViewModels.csproj" />
+    <ProjectReference Include="..\eSchool.ViewModels\eKabita.ViewModels.csproj" />
   </ItemGroup>
 
 	<ItemGroup>

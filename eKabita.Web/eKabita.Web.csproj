@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\LoginViewModel\**" />
+    <Compile Remove="Models\RegisterViewModel\**" />
+    <Content Remove="Models\LoginViewModel\**" />
+    <Content Remove="Models\RegisterViewModel\**" />
+    <EmbeddedResource Remove="Models\LoginViewModel\**" />
+    <EmbeddedResource Remove="Models\RegisterViewModel\**" />
+    <None Remove="Models\LoginViewModel\**" />
+    <None Remove="Models\RegisterViewModel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,11 +28,6 @@
     <ProjectReference Include="..\eKabita.Data\eKabita.Data.csproj" />
     <ProjectReference Include="..\eKabita.Repsitories\eKabita.Repsitories.csproj" />
     <ProjectReference Include="..\eKabita.Services\eKabita.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\LoginViewModel\" />
-    <Folder Include="Models\RegisterViewModel\" />
   </ItemGroup>
 
 </Project>
