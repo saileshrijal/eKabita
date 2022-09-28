@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Utilites", "eKabita
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Repsitories", "eKabita.Repsitories\eKabita.Repsitories.csproj", "{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSchool.ViewModels", "eSchool.ViewModels\eSchool.ViewModels.csproj", "{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.ViewModels", "eSchool.ViewModels\eKabita.ViewModels.csproj", "{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
