@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eKabita.Repsitories\eKabita.Repsitories.csproj" />
     <ProjectReference Include="..\eSchool.ViewModels\eKabita.ViewModels.csproj" />
   </ItemGroup>
 

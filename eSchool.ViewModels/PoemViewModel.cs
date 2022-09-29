@@ -9,7 +9,6 @@ namespace eKabita.ViewModels
         public string? Description { get; set; }
         public string? Remarks { get; set; }
         public string? ApplicationUserId { get; set; }
-        public List<Poem>? poems { get; set; }
 
         public PoemViewModel()
         {
