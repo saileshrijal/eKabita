@@ -62,8 +62,10 @@ namespace eKabita.Services.Implementation
         {
             var model = new PoemViewModel().ConvertViewModel(vm);
             var modelById = await _unitOfWork.Poem.GetBy(x => x.Id == model.Id);
-            model.Title = vm.Title;
-            model.Description = vm.Description;
+            modelById.Title = vm.Title;
+            modelById.Description = vm.Description;
+            modelById.Remarks = vm.Remarks;
+
             await _unitOfWork.Save();
         }
     }
