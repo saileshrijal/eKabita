@@ -1,4 +1,6 @@
-﻿using eKabita.ViewModels;
+﻿using eKabita.Models;
+using eKabita.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
 namespace eKabita.Services.Interface
 {
@@ -7,5 +9,7 @@ namespace eKabita.Services.Interface
         Task Register(RegisterViewModel vm);
         Task Login(LoginViewModel vm);
         Task Logout();
+        Task<ManageProfileViewModel> GetUserById(string userId);
+        Task UpdateUser(ManageProfileViewModel vm);
     }
 }

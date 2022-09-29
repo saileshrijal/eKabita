@@ -1,0 +1,43 @@
+﻿@model eKabita.ViewModels.ManageProfileViewModel
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Edit Profile</h1>
+            <form method="post" asp-action="ManageProfile">
+                <input type="hidden" asp-for="Id" />
+                <div class="mb-3">
+                    <label class="form-label" asp-for="FirstName">Firstname</label>
+                    <input type="text" asp-for="FirstName" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="LastName">Lastname</label>
+                    <input type="text" asp-for="LastName" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="UserName">Username</label>
+                    <input type="text" asp-for="UserName" class="form-control" disabled/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Email">Email</label>
+                    <input type="text" asp-for="Email" class="form-control" disabled/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Address">Address</label>
+                    <input type="text" asp-for="Address" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Gender">Gender</label>
+                    <select class="form-select" asp-for="Gender">
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

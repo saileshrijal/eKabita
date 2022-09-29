@@ -1,0 +1,46 @@
+﻿@model List<eKabita.ViewModels.PoemViewModel>
+@{
+    ViewData["Title"] = "My Poems";
+}
+
+<a class="btn btn-primary" asp-action="Create">Create</a>
+<h2>List of your poems</h2>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Poem
+            </th>
+            <th>
+                Remarks
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.Remarks
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

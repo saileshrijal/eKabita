@@ -10,7 +10,7 @@
             <form method="post" asp-action="Logout" asp-controller="Account">
                 <button type="submit" class="btn btn-primary">Logout</button>
             </form>
-            <a asp-controller="Account" asp-action="UserDetail">
+            <a asp-controller="Account" asp-action="ManageProfile">
                 Hi, @userManager.Users.FirstOrDefault(x=>x.UserName == User.Identity.Name).FullName</a>
         </li>
     }

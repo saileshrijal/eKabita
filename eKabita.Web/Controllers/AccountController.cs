@@ -1,20 +1,22 @@
 ﻿using eKabita.Models;
 using eKabita.Services.Interface;
 using eKabita.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eKabita.Web.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private readonly IUserService _userService;
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public AccountController(IUserService userService, UserManager<ApplicationUser> _userManager)
+        public AccountController(IUserService userService,UserManager<ApplicationUser> userManager)
         {
             _userService = userService;
-            userManager = _userManager;
+            _userManager = userManager;
         }
 
         [HttpPost]
@@ -25,12 +27,15 @@ namespace eKabita.Web.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
+
         public async Task<IActionResult> Register(RegisterViewModel regViewModel) {
             if (ModelState.IsValid) {
                 await _userService.Register(regViewModel);
@@ -40,12 +45,16 @@ namespace eKabita.Web.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
+
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
+
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
             if (ModelState.IsValid)
@@ -57,13 +66,19 @@ namespace eKabita.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> UserDetail() {
-            var user = await userManager.GetUserAsync(HttpContext.User);
-            var vm = new UserDetailViewModel()
-            {
-                Id = user.Id,
-            };
+        public async Task<IActionResult> ManageProfile() {
+
+            var currentUser = await _userManager.GetUserAsync(HttpContext.User);
+            var vm = await _userService.GetUserById(currentUser.Id);
             return View(vm);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ManageProfile(ManageProfileViewModel vm)
+        {
+            await _userService.UpdateUser(vm);
+            return RedirectToAction(nameof(ManageProfile));
         }
     }
 }
