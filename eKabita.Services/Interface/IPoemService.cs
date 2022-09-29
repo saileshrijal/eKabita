@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace eKabita.Services.Interface
 {
-    internal class IPoemService
+    public class IPoemService
     {
+
     }
 }
