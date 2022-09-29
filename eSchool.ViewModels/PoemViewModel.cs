@@ -1,9 +1,4 @@
 ﻿using eKabita.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eKabita.ViewModels
 {
@@ -14,6 +9,7 @@ namespace eKabita.ViewModels
         public string? Description { get; set; }
         public string? Remarks { get; set; }
         public string? ApplicationUserId { get; set; }
+        public List<Poem>? poems { get; set; }
 
         public PoemViewModel()
         {
