@@ -87,7 +87,6 @@ namespace eKabita.Web.Controllers
             return View(vm);
         }
 
-
         public async Task<IActionResult> Delete(Guid id)
         {
             if(id == Guid.Empty)
