@@ -1,6 +1,4 @@
-﻿@using eKabita.Models
-@inject SignInManager<ApplicationUser> signInManager
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,23 +27,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ml-auto">
-                        @if(signInManager.IsSignedIn(User)){
-                            <li class="nav-item">
-                                <form method="post" asp-action="Logout" asp-controller="Account">
-                                    <button type="submit" class="btn btn-primary">Logout</button>        
-                                </form>
-                            </li>
-                        }else{
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
-                            </li>
-                        }
-                        
-                    </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>

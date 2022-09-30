@@ -1,5 +1,7 @@
-﻿using eKabita.Services.Interface;
+﻿using eKabita.Models;
+using eKabita.Services.Interface;
 using eKabita.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eKabita.Web.Controllers
@@ -7,10 +9,12 @@ namespace eKabita.Web.Controllers
     public class AccountController : Controller
     {
         private readonly IUserService _userService;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public AccountController(IUserService userService)
+        public AccountController(IUserService userService, UserManager<ApplicationUser> _userManager)
         {
             _userService = userService;
+            userManager = _userManager;
         }
 
         [HttpPost]
@@ -50,6 +54,16 @@ namespace eKabita.Web.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View(loginViewModel);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UserDetail() {
+            var user = await userManager.GetUserAsync(HttpContext.User);
+            var vm = new UserDetailViewModel()
+            {
+                Id = user.Id,
+            };
+            return View(vm);
         }
     }
 }

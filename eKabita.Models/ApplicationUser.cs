@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eKabita.Models
 {
@@ -11,5 +12,14 @@ namespace eKabita.Models
         public string? ProfilePictureUrl { get; set; }
         public List<Poem>? Poems { get; set; }
         public List<Like>? Likes { get; set; }
+
+        [NotMapped]
+        public string? FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
     }
 }
