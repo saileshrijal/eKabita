@@ -1,0 +1,27 @@
+﻿@using eKabita.Models
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+
+<ul class="navbar-nav ml-auto">
+    @if (signInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <form method="post" asp-action="Logout" asp-controller="Account">
+                <button type="submit" class="btn btn-primary">Logout</button>
+            </form>
+            <a asp-controller="Account" asp-action="ManageProfile">
+                Hi, @userManager.Users.FirstOrDefault(x=>x.UserName == User.Identity.Name).FullName</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+    }
+
+</ul>
