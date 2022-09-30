@@ -1,4 +1,5 @@
-﻿using eKabita.Models;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using eKabita.Models;
 using eKabita.Services.Interface;
 using eKabita.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -11,12 +12,14 @@ namespace eKabita.Web.Controllers
     public class PoemController : Controller
     {
         private readonly IPoemService _poemService;
+        public INotyfService _notifyService { get; }
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public PoemController(IPoemService poemService, UserManager<ApplicationUser> userManager)
+        public PoemController(IPoemService poemService, UserManager<ApplicationUser> userManager, INotyfService notifyService)
         {
             _poemService = poemService;
             _userManager = userManager;
+            _notifyService = notifyService;
         }
 
         public async Task<IActionResult> Index()
@@ -37,12 +40,15 @@ namespace eKabita.Web.Controllers
         {
             var user = await _userManager.GetUserAsync(HttpContext.User);
             vm.ApplicationUserId = user.Id;
-            if (ModelState.IsValid)
+
+            if (!ModelState.IsValid)
             {
-                await _poemService.AddPoem(vm);
-                return RedirectToAction(nameof(Index));
+                return View(vm);
             }
-            return View(vm);
+
+            await _poemService.AddPoem(vm);
+            _notifyService.Success("Poem Created Successfully");
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
@@ -75,6 +81,7 @@ namespace eKabita.Web.Controllers
             if (ModelState.IsValid)
             {
                 await _poemService.UpdatePoem(vm);
+                _notifyService.Success("Poem Updated Successfully");
                 return RedirectToAction(nameof(Index));
             }
             return View(vm);
@@ -97,6 +104,7 @@ namespace eKabita.Web.Controllers
                 return Content("You are not authorized");
             }
             await _poemService.DeletePoem(id);
+            _notifyService.Success("Poem Deleted Successfully");
             return RedirectToAction(nameof(Index));
         }
     }
