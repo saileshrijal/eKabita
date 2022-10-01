@@ -1,12 +1,10 @@
-﻿using eKabita.Models;
-using eKabita.Services.Interface;
-using eKabita.ViewModels;
-using Microsoft.AspNetCore.Identity;
+﻿using eKabita.Services.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace eKabita.Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IHomeService _homeService;

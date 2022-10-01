@@ -2,13 +2,7 @@
 using eKabita.Repsitories.Configuration;
 using eKabita.Services.Interface;
 using eKabita.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eKabita.Services.Implementation
 {

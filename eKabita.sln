@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Utilites", "eKabita
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.Repsitories", "eKabita.Repsitories\eKabita.Repsitories.csproj", "{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.ViewModels", "eSchool.ViewModels\eKabita.ViewModels.csproj", "{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eKabita.ViewModels", "eKabita.ViewModels\eKabita.ViewModels.csproj", "{6593F612-59C2-4F2C-BF8E-9247D4A16BB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35519CE8-640A-49D7-8C7D-75DE1DAD06F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D3F4B0E-C042-4150-A2ED-594BA57F2AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6593F612-59C2-4F2C-BF8E-9247D4A16BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6593F612-59C2-4F2C-BF8E-9247D4A16BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6593F612-59C2-4F2C-BF8E-9247D4A16BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6593F612-59C2-4F2C-BF8E-9247D4A16BB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
