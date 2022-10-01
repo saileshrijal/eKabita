@@ -45,7 +45,7 @@ namespace eKabita.Repsitories.Implementation
             entities.Update(t);
         }
 
-        public async Task<List<T>> GetAll()
+        virtual public async Task<List<T>> GetAll()
         {
             return await entities.ToListAsync();
         }

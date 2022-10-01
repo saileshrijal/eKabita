@@ -1,4 +1,5 @@
-﻿using eKabita.Models;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using eKabita.Models;
 using eKabita.Services.Interface;
 using eKabita.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -9,14 +10,16 @@ namespace eKabita.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller
-    {
+    {    
         private readonly IUserService _userService;
+        public INotyfService _notifyService { get; }
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public AccountController(IUserService userService,UserManager<ApplicationUser> userManager)
+        public AccountController(IUserService userService,UserManager<ApplicationUser> userManager, INotyfService notifyService)
         {
             _userService = userService;
             _userManager = userManager;
+            _notifyService = notifyService;
         }
 
         [HttpPost]
@@ -78,6 +81,7 @@ namespace eKabita.Web.Controllers
         public async Task<IActionResult> ManageProfile(ManageProfileViewModel vm)
         {
             await _userService.UpdateUser(vm);
+            _notifyService.Success("User profile updated successfully");
             return RedirectToAction(nameof(ManageProfile));
         }
     }

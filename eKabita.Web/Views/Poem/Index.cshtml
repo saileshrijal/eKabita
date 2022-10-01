@@ -19,6 +19,9 @@
                 Remarks
             </th>
             <th>
+                Created Date
+            </th>
+            <th>
                 Action
             </th>
         </tr>
@@ -35,6 +38,9 @@
                 </td>
                 <td>
                     @item.Remarks
+                </td>
+                <td>
+                    @item.CreatedDate
                 </td>
                 <td>
                     <a class="btn btn-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
