@@ -23,6 +23,7 @@ builder.Services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDi
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IPoemService, PoemService>();
+builder.Services.AddTransient<IHomeService, HomeService>();
 
 var app = builder.Build();
 
