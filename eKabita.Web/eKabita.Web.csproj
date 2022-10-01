@@ -7,17 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\LoginViewModel\**" />
-    <Compile Remove="Models\RegisterViewModel\**" />
-    <Content Remove="Models\LoginViewModel\**" />
-    <Content Remove="Models\RegisterViewModel\**" />
-    <EmbeddedResource Remove="Models\LoginViewModel\**" />
-    <EmbeddedResource Remove="Models\RegisterViewModel\**" />
-    <None Remove="Models\LoginViewModel\**" />
-    <None Remove="Models\RegisterViewModel\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
       <PrivateAssets>all</PrivateAssets>
