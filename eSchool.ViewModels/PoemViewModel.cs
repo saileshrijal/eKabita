@@ -11,6 +11,7 @@ namespace eKabita.ViewModels
         public string? ApplicationUserId { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
+
         public PoemViewModel()
         {
         }
