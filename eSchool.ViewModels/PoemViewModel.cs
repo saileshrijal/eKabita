@@ -9,6 +9,7 @@ namespace eKabita.ViewModels
         public string? Description { get; set; }
         public string? Remarks { get; set; }
         public string? ApplicationUserId { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         public PoemViewModel()
         {
@@ -21,6 +22,7 @@ namespace eKabita.ViewModels
             Description = model.Description;
             Remarks = model.Remarks;
             ApplicationUserId = model.ApplicationUserId;
+            CreatedDate = model.CreatedDate;
         }
 
         public Poem ConvertViewModel(PoemViewModel vm)
@@ -31,6 +33,7 @@ namespace eKabita.ViewModels
                 Description = vm.Description,
                 Remarks = vm.Remarks,
                 ApplicationUserId = vm.ApplicationUserId,
+                CreatedDate = vm.CreatedDate,
             };
         }
 
