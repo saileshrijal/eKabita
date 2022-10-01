@@ -11,7 +11,7 @@
         @foreach(var item in Model){
             <div class="card mb-3">
                 <div class="card-header text-black">
-                    @item.ApplicationUser.FullName &nbsp;&nbsp;@item.CreatedDate
+                    @item.ApplicationUser?.FullName &nbsp;&nbsp;@item.CreatedDate
                 </div>
                 <div class="card-body">
                     <h5>@item.Title</h5>

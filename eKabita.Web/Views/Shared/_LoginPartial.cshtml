@@ -8,8 +8,12 @@
     {
         <li class="nav-item d-flex justify-content-center align-items-center">
             <a asp-controller="Account" asp-action="ManageProfile" class="nav-link">
-                Hi, @userManager.Users.FirstOrDefault(x=>x.UserName == User.Identity.Name).FullName
+                Hi, @userManager.Users?.FirstOrDefault(x=>x.UserName == User.Identity.Name)?.FullName
             </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Poem" asp-action="Index">My Poems</a>
         </li>
 
          <li class="nav-item">
