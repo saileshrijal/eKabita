@@ -17,6 +17,7 @@ namespace eKabita.ViewModels
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public ApplicationUser? ApplicationUser { get; set; }
         public bool IsLiked { get; set; }
+        public int TotalLikes { get; set; }
         public HomeViewModel()
         {
         }

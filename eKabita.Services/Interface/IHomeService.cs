@@ -14,5 +14,6 @@ namespace eKabita.Services.Interface
         Task<bool> CheckLiked(string userId, Guid poem_id);
         Task LikeByUser(Like like, Guid poemId);
         Task UnLikeByUser(Like like, Guid poemId);
+        int TotalLikes(Guid poemId);
     }
 }

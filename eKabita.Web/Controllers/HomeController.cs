@@ -28,6 +28,7 @@ namespace eKabita.Web.Controllers
             var poems = await _homeService.GetAllPoems();
             foreach (var poem in poems)
             {
+                poem.TotalLikes = _homeService.TotalLikes((Guid)poem.Id);
                 if(await _homeService.CheckLiked(userId, (Guid)poem.Id))
                 {
                     poem.IsLiked = true;
