@@ -12,6 +12,7 @@ namespace eKabita.Web.Controllers
     public class HomeController : Controller
     {
         private IHomeService _homeService;
+
         private IPoemService _poemService;
         private UserManager<ApplicationUser> _userManager;
 
