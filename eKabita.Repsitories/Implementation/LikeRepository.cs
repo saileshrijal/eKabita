@@ -27,5 +27,10 @@ namespace eKabita.Repsitories.Implementation
             var like = _context.Likes.FirstOrDefault(x => x.PoemId == l.PoemId && x.ApplicationUserId == l.ApplicationUserId);
             _context.Likes?.Remove(like);
         }
+
+        public int totalLikes(Guid poemId)
+        {
+            return _context.Likes.Where(x => x.PoemId == poemId).Count();
+        }
     }
 }

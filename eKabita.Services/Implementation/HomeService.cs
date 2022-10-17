@@ -54,5 +54,10 @@ namespace eKabita.Services.Implementation
             _unitOfWork.Like.deleteLike(like);
             await _unitOfWork.Save();
         }
+
+        public int TotalLikes(Guid poemId)
+        {
+            return _unitOfWork.Like.totalLikes(poemId);
+        }
     }
 }

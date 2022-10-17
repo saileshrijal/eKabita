@@ -20,19 +20,26 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    @if (item.IsLiked)
-                    {
-                        <form method="post" asp-action="UnLike" asp-route-id="@item.Id">
-                            <button type="submit" class="btn btn-primary">UnLike</button>
-                        </form>
+                    <div class="row d-flex align-items-center">
+                    <div class="col-6">
+                        @if (item.IsLiked)
+                        {
+                            <form method="post" asp-action="UnLike" asp-route-id="@item.Id">
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-heart-fill"></i></button>
+                            </form>
 
-                    }
-                    else
-                    {
-                        <form method="post" asp-action="Like" asp-route-id="@item.Id">
-                            <button type="submit" class="btn btn-secondary">Like</button>
-                        </form>
-                    }
+                        }
+                        else
+                        {
+                            <form method="post" asp-action="Like" asp-route-id="@item.Id">
+                                    <button type="submit" class="btn btn-secondary"><i class="bi bi-heart-fill"></i></button>
+                            </form>
+                        }
+                    </div>
+                    <div class="col-6">
+                        <p>@item.TotalLikes people liked this poem</p>
+                    </div>
+                </div>
                 </div>
             </div>
         }

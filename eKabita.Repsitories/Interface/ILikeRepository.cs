@@ -11,5 +11,6 @@ namespace eKabita.Repsitories.Interface
     {
         Task<int> checkUserLike(string userId, Guid poem_Id);
         void deleteLike(Like like);
+        int totalLikes(Guid poemId);
     }
 }
