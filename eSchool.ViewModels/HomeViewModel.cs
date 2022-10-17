@@ -1,8 +1,13 @@
 ﻿using eKabita.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace eKabita.ViewModels
 {
-    public class PoemViewModel
+    public class HomeViewModel
     {
         public Guid? Id { get; set; }
         public string? Title { get; set; }
@@ -11,12 +16,12 @@ namespace eKabita.ViewModels
         public string? ApplicationUserId { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public ApplicationUser? ApplicationUser { get; set; }
-
-        public PoemViewModel()
+        public bool IsLiked { get; set; }
+        public HomeViewModel()
         {
         }
 
-        public PoemViewModel(Poem model)
+        public HomeViewModel(Poem model)
         {
             Id = model.Id;
             Title = model.Title;
@@ -29,7 +34,8 @@ namespace eKabita.ViewModels
 
         public Poem ConvertViewModel(PoemViewModel vm)
         {
-            return new Poem(){
+            return new Poem()
+            {
                 Id = vm.Id,
                 Title = vm.Title,
                 Description = vm.Description,
@@ -39,6 +45,5 @@ namespace eKabita.ViewModels
                 ApplicationUser = vm.ApplicationUser,
             };
         }
-
     }
 }

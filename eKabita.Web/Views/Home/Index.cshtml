@@ -1,4 +1,4 @@
-﻿@model List<eKabita.ViewModels.PoemViewModel>
+﻿@model List<eKabita.ViewModels.HomeViewModel>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -20,7 +20,19 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    @item.Remarks
+                    @if (item.IsLiked)
+                    {
+                        <form method="post" asp-action="UnLike" asp-route-id="@item.Id">
+                            <button type="submit" class="btn btn-primary">UnLike</button>
+                        </form>
+
+                    }
+                    else
+                    {
+                        <form method="post" asp-action="Like" asp-route-id="@item.Id">
+                            <button type="submit" class="btn btn-secondary">Like</button>
+                        </form>
+                    }
                 </div>
             </div>
         }

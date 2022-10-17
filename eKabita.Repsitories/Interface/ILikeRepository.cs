@@ -9,5 +9,7 @@ namespace eKabita.Repsitories.Interface
 {
     public interface ILikeRepository : IGenericRepository<Like>
     {
+        Task<int> checkUserLike(string userId, Guid poem_Id);
+        void deleteLike(Like like);
     }
 }
